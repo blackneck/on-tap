@@ -1,3 +1,7 @@
 const bars = require('../data/bars');
 
-console.log(bars);
+module.exports = {
+    getBars() {
+        return bars;
+    }
+};
