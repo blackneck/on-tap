@@ -1,0 +1,32 @@
+{
+  "name": "on-tap",
+  "version": "0.1.0",
+  "description": "Brewdog beers on tap",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
+    "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha",
+    "prepublish": "npm run compile",
+    "compile": "babel -d lib/ src/"
+  },
+  "tonicExampleFilename": "example.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clementallen/on-tap.git"
+  },
+  "author": "Clement Allen <clementallen.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clementallen/on-tap/issues"
+  },
+  "homepage": "https://github.com/clementallen/on-tap#readme",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "isparta": "^4.0.0",
+    "mocha": "^2.5.3"
+  }
+}
