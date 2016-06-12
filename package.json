@@ -1,6 +1,6 @@
 {
   "name": "on-tap",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Brewdog beers on tap",
   "main": "index.js",
   "scripts": {
