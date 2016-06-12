@@ -6,8 +6,9 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
     "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha",
-    "prepublish": "npm run compile",
-    "compile": "babel -d lib/ src/"
+    "prepublish": "publish-please guard && npm run compile",
+    "compile": "babel -d lib/ src/",
+    "publish-please": "publish-please"
   },
   "tonicExampleFilename": "example.js",
   "repository": {
@@ -28,6 +29,7 @@
     "coveralls": "^2.11.9",
     "isparta": "^4.0.0",
     "mocha": "^2.5.3",
+    "publish-please": "^2.1.4",
     "sinon": "^1.17.4"
   },
   "dependencies": {
