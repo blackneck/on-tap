@@ -27,6 +27,14 @@
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "isparta": "^4.0.0",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4"
+  },
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "clean-array": "^1.0.0",
+    "in-array": "^0.1.2",
+    "is-upper-case": "^1.1.2",
+    "needle": "^1.0.0",
   }
 }

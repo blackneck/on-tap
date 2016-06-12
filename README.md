@@ -19,6 +19,10 @@ npm install --save on-tap
 const onTap = require('on-tap');
 
 onTap.getBars(); // => { uk: ['bar1', 'bar2'] }
+
+onTap.atLocation('aberdeen', (err, beers) => {
+    console.log(beers); // => ['beer1', 'beer2']
+});
 ```
 
 ### Run tests
