@@ -73,28 +73,23 @@ describe('At Location', () => {
 
     it('should return expected list of beers on tap', () => {
         mockResponse.statusCode = 200;
-        mockResponse.body = '<div class="barText">BREWDOG HEADLINERS<br>Dead Pony Club 3.8%<br>Jet Black Heart 4.7%<br>Kingpin lager 4.7%<br>5AM Saint 5.0%<br>Punk IPA 5.4%<br>OTHER BREWDOG DRAFT<br>Vagabond Pale Ale (GF) 4.5%<br>Bourbon Baby 5.9%<br>--- Extra Beers ---<br>Elvis Juice 6.5%<br>DIPA 9.2%<br>AB:20 14.1%<br>GUEST DRAFT<br>Summer Love 5.2% Victory<br>Fruitlands 4.8% Modern Times<br>Monster\'s Park 12% Modern Times<br>Lomaland Saison 5.5% Modern Times<br>Gueuze 100% Lambic Bio 5% Cantillon<br>Framboise 2.5% Lindemans<br></div>';
+        mockResponse.body = '<div class="barText">BREWDOG DRAFT<br>Dead Pony Club 3,8%<br>Vagabond Pale Ale 4,5%<br>--- Extra Beers ---<br>Ace of Chinook 4,5%<br>BEST OF BRITISH TAP TAKEOVER<br>Jet Black Heart 4,7%<br>CIDER DRAFT<br>5 AM Saint 5%<br>Punk IPA 5,6%<br>~~Convidadas~~<br>Hardcore IPA 9,2%<br><br>GUEST DRAFT<br>    <br>Erdinger - Urweisse 4,9%<br>Iso-Kallan Panimo - Biere de Garde 7%<br>CR/AK &amp; AF Brew - Fruit Sour IPA 7,5%<br> <br>HOPINATOR<br></div>';
         sandbox.stub(needle, 'get').yields(null, mockResponse);
         const expectedBeers = [
-            'Dead Pony Club 3.8%',
-            'Jet Black Heart 4.7%',
-            'Kingpin lager 4.7%',
-            '5AM Saint 5.0%',
-            'Punk IPA 5.4%',
-            'Vagabond Pale Ale (GF) 4.5%',
-            'Bourbon Baby 5.9%',
-            'Elvis Juice 6.5%',
-            'AB:20 14.1%',
-            'Summer Love 5.2% Victory',
-            'Fruitlands 4.8% Modern Times',
-            'Monster&apos;s Park 12% Modern Times',
-            'Lomaland Saison 5.5% Modern Times',
-            'Gueuze 100% Lambic Bio 5% Cantillon',
-            'Framboise 2.5% Lindemans'
+            'Dead Pony Club 3,8%',
+            'Vagabond Pale Ale 4,5%',
+            'Ace of Chinook 4,5%',
+            'Jet Black Heart 4,7%',
+            '5 AM Saint 5%',
+            'Punk IPA 5,6%',
+            'Hardcore IPA 9,2%',
+            'Erdinger - Urweisse 4,9%',
+            'Iso-Kallan Panimo - Biere de Garde 7%',
+            'CR/AK &amp; AF Brew - Fruit Sour IPA 7,5%'
         ];
 
         onTap.atLocation('aberdeen', (err, actualBeers) => {
-            assert.deepEqual(expectedBeers, actualBeers, 'beer results are as expected');
+            assert.deepEqual(actualBeers, expectedBeers, 'beer results are as expected');
         });
     });
 });
