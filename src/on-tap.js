@@ -1,5 +1,4 @@
-const isUpperCase = require('is-upper-case');
-const cleanArray = require('clean-array');
+const excluded = require('../data/excluded');
 const bars = require('../data/bars');
 const cheerio = require('cheerio');
 const inArray = require('in-array');
@@ -26,11 +25,15 @@ function buildBrewdogUrl(barName) {
 }
 
 function filterTapResults(beerHTML) {
-    let beers = cleanArray(beerHTML.split('<br>'));
+    let beers = beerHTML.split('<br>');
+    beers = beers.filter(i => i.trim() !== '');
 
     for(let i = 0; i < beers.length; i++) {
         beers[i] = beers[i].trim();
-        if(isUpperCase(beers[i]) || beers[i].includes('---')) {
+
+        if(inArray(excluded.headings, beers[i]) ||
+            new RegExp(excluded.sections.join('|')).test(beers[i]))
+        {
             beers.splice(i, 1);
         }
     }
