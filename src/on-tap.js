@@ -1,8 +1,10 @@
+const Entities = require('html-entities').AllHtmlEntities;
 const excluded = require('../data/excluded');
 const bars = require('../data/bars');
 const cheerio = require('cheerio');
 const inArray = require('in-array');
 const needle = require('needle');
+const entities = new Entities();
 
 let exports = {};
 
@@ -56,7 +58,7 @@ exports.atLocation = (barName, callback) => {
         const beerHTML = cheerio.load(response.body)('.barText').html();
         if(beerHTML === null) return callback('on-tap details not found');
 
-        const beers = filterTapResults(beerHTML);
+        const beers = filterTapResults(entities.decode(beerHTML));
 
         return callback(null, beers);
      });

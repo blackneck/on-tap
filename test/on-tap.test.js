@@ -90,7 +90,7 @@ describe('At Location', () => {
             'Hardcore IPA 9,2%',
             'Erdinger - Urweisse 4,9%',
             'Iso-Kallan Panimo - Biere de Garde 7%',
-            'CR/AK &amp; AF Brew - Fruit Sour IPA 7,5%'
+            'CR/AK & AF Brew - Fruit Sour IPA 7,5%'
         ];
 
         onTap.atLocation('aberdeen', (err, actualBeers) => {

@@ -1,6 +1,6 @@
 {
   "name": "on-tap",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Brewdog beers on tap",
   "main": "index.js",
   "scripts": {
@@ -22,9 +22,10 @@
   },
   "homepage": "https://github.com/clementallen/on-tap#readme",
   "dependencies": {
-      "cheerio": "^0.20.0",
-      "in-array": "^0.1.2",
-      "needle": "^1.0.0"
+    "cheerio": "^0.20.0",
+    "html-entities": "^1.2.0",
+    "in-array": "^0.1.2",
+    "needle": "^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
