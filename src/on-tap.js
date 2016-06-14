@@ -33,9 +33,7 @@ function filterTapResults(beerHTML) {
     for(let i = 0; i < beers.length; i++) {
         beers[i] = beers[i].trim();
 
-        if(inArray(excluded.headings, beers[i]) ||
-            new RegExp(excluded.sections.join('|')).test(beers[i]))
-        {
+        if(new RegExp(excluded.join('|')).test(beers[i])) {
             beers.splice(i, 1);
         }
     }

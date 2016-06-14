@@ -1,15 +1,13 @@
-{
-    "headings": [
-        "BREWDOG HEADLINERS",
-        "BREWDOG DRAFT",
-        "HOPINATOR",
-        "GUEST DRAFT",
-        "CIDER DRAFT",
-        "OTHER BREWDOG DRAFT",
-        "BEST OF BRITISH TAP TAKEOVER"
-    ],
-    "sections": [
-        "---",
-        "~~"
-    ]
-}
+[
+    "HEADLINERS",
+    "HOPINATOR",
+    "DRAFT",
+    "BEST OF BRITISH TAP TAKEOVER",
+    "STOUTS & PORTERS",
+    "WHEAT",
+    "PALE ALE AND IPA",
+    "SOUR",
+    "SPECIALITY",
+    "---",
+    "~~"
+]
