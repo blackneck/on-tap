@@ -1,5 +1,4 @@
 # Brewdog On Tap
-
 [![npm version](https://badge.fury.io/js/on-tap.svg)](https://www.npmjs.com/package/on-tap)
 [![Build Status](https://travis-ci.org/clementallen/on-tap.svg?branch=master)](https://travis-ci.org/clementallen/on-tap)
 [![Code Climate](https://codeclimate.com/github/clementallen/on-tap/badges/gpa.svg)](https://codeclimate.com/github/clementallen/on-tap)
@@ -14,16 +13,16 @@
 npm install --save on-tap
 ```
 
-
 ### Example
 ``` javascript
 const onTap = require('on-tap');
 
-onTap.getBars(); // => { uk: ['bar1', 'bar2'] }
+const bars = onTap.getBars();
+console.log(bars); // => { uk: ['bar1', 'bar2'] }
 
 onTap.atLocation('aberdeen', (err, beers) => {
     if(err) console.log(err);
-    
+
     console.log(beers); // => ['beer1', 'beer2']
 });
 ```
@@ -34,5 +33,4 @@ npm run test
 ```
 
 ## License
-
 ISC © [Clement Allen](http://clementallen.com)
