@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run compile && ./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
-    "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha",
-    "prepublish": "publish-please guard && npm run compile",
+    "coverage": "npm run compile && babel-node ./node_modules/.bin/isparta cover _mocha",
+    "prepublish": "publish-please guard",
     "compile": "babel -d lib/ src/",
     "publish-please": "publish-please"
   },
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
-    "babel-core": "^6.9.1",
+    "babel-core": "^6.10.4",
     "babel-preset-es2015": "^6.9.0",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
