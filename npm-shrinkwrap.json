@@ -1,6 +1,6 @@
 {
   "name": "on-tap",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "dependencies": {
     "abab": {
       "version": "1.0.3",
