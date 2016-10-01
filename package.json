@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/clementallen/on-tap#readme",
   "dependencies": {
-    "cheerio": "^0.20.0",
+    "cheerio": "^0.22.0",
     "entities": "^1.1.1",
     "in-array": "^0.1.2",
     "needle": "^1.0.0"
@@ -34,7 +34,7 @@
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "isparta": "^4.0.0",
-    "mocha": "^2.5.3",
+    "mocha": "^3.1.0",
     "publish-please": "^2.1.4",
     "sinon": "^1.17.4"
   }
