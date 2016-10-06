@@ -58,7 +58,7 @@ exports.atLocation = (barName, callback) => {
     needle.get(brewdogUrl, function(err, response){
         if(err) return callback(err);
         if(response.statusCode !== 200) return callback('Site unavailable');
-        
+
         const beerHTML = cheerio.load(response.body)('.barText').html();
         if(beerHTML === null) return callback('on-tap details not found');
 
